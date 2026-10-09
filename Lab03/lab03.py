@@ -1,7 +1,12 @@
-seconds = 10000
-
-hours = seconds // 3600
-remainder = seconds % 3600
-minutes_colum = remainder // 60
-seconds_colum = minutes_colum % 60
-print(str(hours) + " hours, " + str(minutes_colum) + " minutes and " + str(seconds_colum) + " seconds")
+starting_milliseconds = 10000123
+print("starting milliseconds: " + str(starting_milliseconds))
+hours = starting_milliseconds // 3600000
+print("hours: \t\t" + str(hours))
+ms_left_1 = starting_milliseconds % 3600000
+minutes = ms_left_1 // 60000
+print("minutes: \t\t" + str(minutes))
+ms_left_2 = ms_left_1 % 60000
+seconds = ms_left_2 // 1000
+print("seconds: \t\t" + str(seconds))
+milli_seconds = ms_left_2 % 1000
+print("milli seconds: \t" + str(milli_seconds))
